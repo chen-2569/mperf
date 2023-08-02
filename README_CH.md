@@ -7,16 +7,7 @@
 
 mperf是一个微架构层次的算子性能调优工具箱，主要面向移动/嵌入式平台的CPU/GPU核心，目标是“为构建一个更接近闭环的算子调优反馈回路”提供系列基础工具。
 
-## 功能及特点
-* 测试微架构层次的各类常用性能分析参数(性能峰值/带宽/延迟等)
-* 绘制 Hierarchical Roofline，用于评估优化水平
-* 提供 CPU/GPU PMU 数据获取能力
-* 提供 PMU Metrics/[TMA](https://www.intel.com/content/www/us/en/develop/documentation/vtune-cookbook/top/methodologies/top-down-microarchitecture-analysis-method.html#top-down-microarchitecture-analysis-method_GUID-FA8F07A1-3590-4A91-864D-CE96456F84D7) 分析能力，用于分析性能瓶颈
-* 提供 OpenCL Linter方案，用于指导OpenCL算子优化(后续版本提供)
-* C++工程
-* 轻量级的、可嵌入的API级别的库
-* 目前支持架构：ARM CPUs, Mali GPUs, Adreno 6xx GPUs, 可扩展更多架构
-* 暂不能完整支持iOS系统
+
 
 ## 安装
 mperf 支持 CMake 编译，要求 CMake 版本不低于 3.15.2，可以遵照以下步骤进行编译：
