@@ -1,7 +1,4 @@
 # 借助mperf进行矩阵乘法极致优化
-## 前言
-单精度矩阵乘法（SGEMM）是非常典型的计算密集型算子，对SGEMM的优化也经常被当作算子优化从业人员的练手项目。本文将借助于mperf在ARM A55 cpu核心上对SGEMM的性能进行极致优化，过程中会展示mperf辅助性能优化工作的基本逻辑。希望本文的读者对计算机体系结构的基础概念有一定了解，有算子优化经验更好，另外可以补充一些[TMA](https://www.intel.com/content/www/us/en/develop/documentation/vtune-cookbook/top/methodologies/top-down-microarchitecture-analysis-method.html#top-down-microarchitecture-analysis-method_GUID-FA8F07A1-3590-4A91-864D-CE96456F84D7)的基础概念。  
-本文的计算目标是C=A\*B，假设矩阵A大小为M\*K，矩阵B大小为K\*N，则得到矩阵C大小为M\*N。为了后文分块操作的方便，这里假设M，N是4的倍数，并选择M=N=K分别为100，200，300，500，700，900的矩阵尺寸进行性能测试。
 
 ## 矩阵乘法优化手段
 ### 寄存器和FPU优化——Naive实现到循环展开
